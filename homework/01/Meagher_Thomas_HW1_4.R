@@ -1,43 +1,40 @@
 # Thomas Meagher HW1 Q4
+# Section 2.4, page 54-55, question 8
 
 # a) read College data set
-CollegeData <- read.csv(file="data/College.csv", header=TRUE, sep=",")
+college_data <- read.csv(file="data/College.csv", header=TRUE, sep=",")
 
 # b
-rownames(CollegeData)=CollegeData[,1]
-fix(CollegeData)
+rownames(college_data)=college_data[,1]
+fix(college_data)
 
-CollegeData=CollegeData[,-1]
-fix(CollegeData)
+college_data=college_data[,-1]
+fix(college_data)
 
 # c
 # i
-summary(CollegeData)
+summary(college_data)
 
 # ii
-pairs(CollegeData[,1:10])
+pairs(college_data[,1:10])
 
 # iii
-attach(CollegeData)
+attach(college_data)
 Private=as.factor(Private)
-plot(Private, Outstate, xlab="Private", ylab="Tuition")
+plot(Private, Outstate, xlab="Private", ylab="Tuition", main="Tuition at Non-Private/Private")
 
 # iv
-Elite=rep("No",nrow(CollegeData))
+Elite=rep("No",nrow(college_data))
 Elite[Top10perc>50]="Yes"
 Elite=as.factor(Elite)
-CollegeData=data.frame(CollegeData,Elite)
-summary(CollegeData)
-plot(Elite,Outstate, xlab="Elite", ylab="Tuition")
+college_data=data.frame(college_data, Elite)
+summary(college_data)
+plot(Elite, Outstate, xlab="Elite", ylab="Tuition", main="Tuition at Non-Elite/Elite")
 
 # v
-hist(Accept/Apps,breaks=15)
-hist(F.Undergrad,breaks=5)
-hist(Grad.Rate,breaks=30)
+hist(Accept/Apps, breaks=15)
+hist(F.Undergrad, breaks=5)
+hist(Grad.Rate, breaks=30)
 
 # vi
-
-
-
-
 
