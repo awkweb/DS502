@@ -32,9 +32,11 @@ summary(college_data)
 plot(Elite, Outstate, xlab="Elite", ylab="Tuition", main="Tuition at Non-Elite/Elite")
 
 # v
+par(mfrow=c(2,2))
 hist(Accept/Apps, breaks=15)
 hist(F.Undergrad, breaks=5)
 hist(Grad.Rate, breaks=30)
+hist(S.F.Ratio, breaks=10)
 
 # vi
 

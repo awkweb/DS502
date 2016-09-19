@@ -20,7 +20,7 @@ summary(lm.fit)
 # and hold the others constant, then for an unit increase in that variable, mpg will likely change.
 
 # ii
-# Origin, year, weight, and displacement all apear to have a statistically significant relationship to the
+# Origin, year, weight, and displacement all appear to have a statistically significant relationship to the
 # response. This is because each has a p-value less than 0.05, meaning they are significant in the model.
 # While origin, year, and weight's p-values are very small, displacement's (0.008) is quite a bit larger than
 # the others.

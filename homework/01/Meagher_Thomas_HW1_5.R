@@ -7,13 +7,12 @@ attach(auto_data)
 
 # a
 # quantitative
-# mpg, displacement, horsepower, weight, acceleration
-quantitative <- subset(auto_data, select = c(mpg, displacement, horsepower, weight, acceleration))
+# mpg, displacement, horsepower, weight, acceleration, year
+quantitative <- subset(auto_data, select = c(mpg, displacement, horsepower, weight, acceleration, year))
 
 # qualitative
-# cylinder, year, origin, name
+# cylinders, origin, name
 cylinders=as.factor(cylinders)
-year=as.factor(year)
 origin=as.factor(origin)
 name=as.factor(name)
 
@@ -32,6 +31,7 @@ sapply(quantitative, sd)
 
 # e
 pairs(quantitative)
+par(mfrow=c(2,3))
 plot(mpg, acceleration)
 plot(horsepower, weight)
 plot(mpg, weight)

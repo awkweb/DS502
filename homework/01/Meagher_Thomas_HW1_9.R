@@ -10,7 +10,7 @@ summary(lm.fit)
 
 # i
 # Yes, there is a strong relationship between the predictor and response because
-# the residual standard error (RSE),4.906, is less than 10%. Also, the coefficent of determination
+# the residual standard error (RSE),4.906, is less than 10%. Also, the coefficient of determination
 # is 0.6059 -- fairly close to one, meaning a decent amount of the variation in mpg is
 # explained by horsepower.
 
@@ -30,7 +30,7 @@ predict(lm.fit, data.frame(horsepower=c(98)), interval="prediction")
 
 # b
 plot(horsepower, mpg)
-abline(lm.fit)
+abline(lm.fit, col="red")
 
 # c
 par(mfrow=c(2, 2))
