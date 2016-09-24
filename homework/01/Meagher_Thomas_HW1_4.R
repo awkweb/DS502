@@ -1,7 +1,7 @@
 # Thomas Meagher HW1 Q4
 # Section 2.4, page 54-55, question 8
 
-# a) read College data set
+#a
 college_data <- read.csv(file="data/College.csv", header=TRUE, sep=",")
 
 # b
@@ -39,4 +39,10 @@ hist(Grad.Rate, breaks=30)
 hist(S.F.Ratio, breaks=10)
 
 # vi
+par(mfrow=c(2,2))
+hist(Outstate, breaks=10)
+hist(Room.Board, breaks=10)
+hist(Books, breaks=10)
+hist(Personal, breaks=10)
+
 
